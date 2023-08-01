@@ -1,5 +1,7 @@
+import { Input } from "./filter-styled";
+
 const Filter = () => {
-  return <input type="text" />;
+  return <Input type="text" />;
 };
 
 export default Filter;
