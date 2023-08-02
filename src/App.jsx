@@ -1,6 +1,7 @@
 import { Container, Hero } from "./app-styled";
 import Header from "./components/Header/Header";
 import Filter from "./components/Filter/Filter";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       </Hero>
       <Filter />
       <p>main page</p>
+      <Footer />
     </Container>
   );
 }
