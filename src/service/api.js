@@ -1,10 +1,10 @@
 import axios from "axios";
 
+axios.defaults.headers["x-api-key"] =
+  "f308fda99e25d0fcc71eaea90a0385ce055b0719a640175b505544e087c3c839";
+
 const instanse = axios.create({
   baseURL: "http://api.sellspot.com.ua:8080",
-  params: {
-    apiKey: "f308fda99e25d0fcc71eaea90a0385ce055b0719a640175b505544e087c3c839",
-  },
 });
 
 export const getCategories = async () => {
