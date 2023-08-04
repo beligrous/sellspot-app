@@ -14,3 +14,7 @@ export const Hero = styled.h1`
   margin: 0 209px;
   text-align: center;
 `;
+
+export const List = styled.ul`
+  list-style: none;
+`;

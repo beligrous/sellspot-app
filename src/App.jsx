@@ -1,9 +1,10 @@
 import { useState, useEffect, useCallback } from "react";
-import { Container, Hero } from "./app-styled";
+import { Container, Hero, List } from "./app-styled";
 import { getCategories } from "./service/api";
 import Header from "./components/Header/Header";
 import Filter from "./components/Filter/Filter";
 import Footer from "./components/Footer/Footer";
+import CategoryCard from "./components/CategoryCard/CategoryCard";
 
 function App() {
   const [categoryList, setCategoryList] = useState([]);
@@ -24,7 +25,7 @@ function App() {
   const list = categoryList.map((item) => {
     return (
       <li key={item.id}>
-        <p>{item.category_name}</p>
+        <CategoryCard data={item} />
       </li>
     );
   });
@@ -37,7 +38,7 @@ function App() {
         перевірених брендів
       </Hero>
       <Filter />
-      <ul>{list}</ul>
+      <List>{list}</List>
       <Footer />
     </Container>
   );
