@@ -11,7 +11,7 @@ function App() {
   const getData = useCallback(async () => {
     try {
       const data = await getCategories();
-      setCategoryList(data.results);
+      setCategoryList(data);
     } catch (error) {
       alert(error.message);
     }
