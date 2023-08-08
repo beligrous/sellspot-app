@@ -1,13 +1,14 @@
+import { Container, CategoryContainer } from "./categoryCard-styled";
 import PropTypes from "prop-types";
 
 const CategoryCard = ({ data }) => {
   return (
-    <div>
+    <Container>
       <p>{data.category_name}</p>
-      <div>
-        <p>{data.child_count} категорії</p>
-      </div>
-    </div>
+      <CategoryContainer>
+        <p style={{ margin: "0" }}>{data.child_count} категорії</p>
+      </CategoryContainer>
+    </Container>
   );
 };
 
