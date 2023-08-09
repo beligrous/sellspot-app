@@ -1,6 +1,7 @@
 import { styled } from "styled-components";
 
 export const Container = styled.header`
+  /* position: fixed; */
   height: 88px;
   display: block;
   width: 100%;
