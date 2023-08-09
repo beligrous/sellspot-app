@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.li`
   box-sizing: border-box;
   background-color: #f2f2f2;
   border-radius: 32px;
@@ -8,7 +8,7 @@ export const Container = styled.div`
   width: 400px;
   height: 400px;
   &:nth-child(4n + 1) {
-    flex-grow: 1;
+    width: 750px;
   }
 `;
 

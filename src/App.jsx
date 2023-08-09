@@ -24,9 +24,9 @@ function App() {
 
   const list = categoryList.map((item) => {
     return (
-      <li key={item.id}>
-        <CategoryCard data={item} />
-      </li>
+      <>
+        <CategoryCard key={item.id} data={item} />
+      </>
     );
   });
 
