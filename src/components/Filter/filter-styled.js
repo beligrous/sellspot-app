@@ -8,6 +8,7 @@ export const Form = styled.div`
   height: 96px;
   width: 888px;
   margin: 0 auto;
+  margin-bottom: 56px;
   border-radius: 32px;
   border: none;
 `;

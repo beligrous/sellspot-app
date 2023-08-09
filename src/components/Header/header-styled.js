@@ -11,6 +11,7 @@ export const Container = styled.header`
   background-color: #fff;
   padding-left: 32px;
   padding-right: 16px;
+  margin-bottom: 56px;
 `;
 
 export const Logo = styled.p`

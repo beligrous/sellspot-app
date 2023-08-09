@@ -13,6 +13,7 @@ export const Container = styled.div`
 
 export const Hero = styled.h1`
   margin: 0 209px;
+  margin-bottom: 56px;
   text-align: center;
   width: 1500px;
   font-weight: 500;
@@ -24,4 +25,5 @@ export const List = styled.ul`
   display: flex;
   flex-wrap: wrap;
   gap: 32px;
+  margin-bottom: 100px;
 `;
