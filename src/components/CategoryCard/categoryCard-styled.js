@@ -7,9 +7,8 @@ export const Container = styled.div`
   padding: 32px;
   width: 400px;
   height: 400px;
-  flex-grow: 1;
   &:nth-child(4n + 1) {
-    flex-grow: 2;
+    flex-grow: 1;
   }
 `;
 
