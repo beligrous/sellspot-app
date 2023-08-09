@@ -1,3 +1,4 @@
+import { Button } from "../Filter/filter-styled";
 import { Container, Logo, HeadList } from "./header-styled";
 
 const Header = () => {
@@ -10,6 +11,7 @@ const Header = () => {
         <li>Контакти</li>
         <li>Умови використання сайту</li>
       </HeadList>
+      <Button>Продати</Button>
     </Container>
   );
 };

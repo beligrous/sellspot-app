@@ -8,6 +8,7 @@ export const Form = styled.div`
   height: 96px;
   width: 888px;
   margin: 0 auto;
+  padding: 0 16px 0 32px;
   margin-bottom: 56px;
   border-radius: 32px;
   border: none;
@@ -15,7 +16,7 @@ export const Form = styled.div`
 
 export const Input = styled.input`
   border: none;
-  margin-left: 32px;
+  /* margin-left: 32px; */
   &::before {
     content: " ";
     width: 48px;
@@ -30,5 +31,5 @@ export const Button = styled.button`
   font-size: 24px;
   padding: 14px 24px;
   margin: 16px 0;
-  margin-right: 16px;
+  margin-left: auto;
 `;
