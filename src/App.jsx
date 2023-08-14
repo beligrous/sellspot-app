@@ -23,11 +23,7 @@ function App() {
   }, [getData]);
 
   const list = categoryList.map((item) => {
-    return (
-      <>
-        <CategoryCard key={item.id} data={item} />
-      </>
-    );
+    return <CategoryCard key={item.id} data={item}></CategoryCard>;
   });
 
   return (
