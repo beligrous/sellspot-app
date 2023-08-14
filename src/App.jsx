@@ -9,6 +9,13 @@ import CategoryCard from "./components/CategoryCard/CategoryCard";
 function App() {
   const [categoryList, setCategoryList] = useState([]);
 
+  if (window.location.protocol.indexOf("https") == 0) {
+    var el = document.createElement("meta");
+    el.setAttribute("http-equiv", "Content-Security-Policy");
+    el.setAttribute("content", "upgrade-insecure-requests");
+    document.head.append(el);
+  }
+
   const getData = useCallback(async () => {
     try {
       const data = await getCategories();
