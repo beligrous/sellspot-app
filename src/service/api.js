@@ -13,3 +13,8 @@ export const getCategories = async () => {
   const response = await instanse.get("/api/v1/category/parent");
   return response.data;
 };
+
+export const getCategoryById = async (id) => {
+  const response = await instanse.get(`/api/v1/category/child?parent_id=${id}`);
+  return response.data;
+};
