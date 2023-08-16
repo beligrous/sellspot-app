@@ -12,7 +12,10 @@ function App() {
 
   return (
     <Container>
-      <RouterProvider router={router} />
+      <RouterProvider
+        router={router}
+        fallbackElement={<p>LOADING, PLEASE WAIT</p>}
+      />
     </Container>
   );
 }

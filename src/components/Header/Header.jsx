@@ -1,5 +1,4 @@
-import { Button } from "../Filter/filter-styled";
-import { Container, Logo, HeadList } from "./header-styled";
+import { Container, Logo, HeadList, SaleButton } from "./header-styled";
 
 const Header = () => {
   return (
@@ -11,7 +10,7 @@ const Header = () => {
         <li>Контакти</li>
         <li>Умови використання сайту</li>
       </HeadList>
-      <Button>Продати</Button>
+      <SaleButton to={"/sellspot-app/product"}>Продати</SaleButton>
     </Container>
   );
 };
