@@ -7,7 +7,7 @@ import Layout from "../pages/layout/Layout";
 
 export const router = createBrowserRouter([
   {
-    path: "/sellspot-app",
+    path: "/",
     element: <Layout />,
     errorElement: <ErrorPage />,
     children: [
@@ -17,10 +17,10 @@ export const router = createBrowserRouter([
       },
       {
         element: <ProductPage />,
-        path: "/sellspot-app/product",
+        path: "/product",
       },
       {
-        path: `/sellspot-app/:id`,
+        path: `/:id`,
         element: <CategoryPage />,
       },
     ],
