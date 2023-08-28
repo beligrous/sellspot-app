@@ -10,7 +10,7 @@ const Header = () => {
         <li>Контакти</li>
         <li>Умови використання сайту</li>
       </HeadList>
-      <SaleButton to={"/sellspot-app/product"}>Продати</SaleButton>
+      <SaleButton to={"/product"}>Продати</SaleButton>
     </Container>
   );
 };

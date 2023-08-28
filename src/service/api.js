@@ -6,7 +6,7 @@ axios.defaults.headers.common = {
 };
 
 const instanse = axios.create({
-  baseURL: "http://api.sellspot.com.ua:8080",
+  baseURL: "https://api.sellspot.com.ua",
 });
 
 export const getCategories = async () => {
