@@ -6,7 +6,6 @@ const Header = () => {
   const [apear, setApear] = useState(false);
 
   const handleCatalogue = () => {
-    console.log(apear);
     setApear(!apear);
   };
 
@@ -16,7 +15,7 @@ const Header = () => {
         <Logo>SellSpot</Logo>
         <HeadList>
           <li>
-            <button onClick={handleCatalogue}>Каталог</button>
+            <p onClick={handleCatalogue}>Каталог</p>
           </li>
           <li>Про нас</li>
           <li>Контакти</li>

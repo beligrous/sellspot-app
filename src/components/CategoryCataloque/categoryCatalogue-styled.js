@@ -5,6 +5,6 @@ export const Container = styled.div`
   top: 120px;
   width: 100%;
   height: 480px;
-  background-color: blue;
+  background-color: aquamarine;
   padding: 32px;
 `;
