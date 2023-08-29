@@ -9,14 +9,13 @@ export const Container = styled.header`
   display: flex;
   align-items: center;
   border-radius: 32px;
-  background-color: #fff;
-  padding-left: 32px;
-  padding-right: 16px;
+  background-color: #f3f3f1;
   margin-bottom: 56px;
 `;
 
 export const Logo = styled.p`
   margin: 0;
+  margin-left: 32px;
 `;
 
 export const HeadList = styled.ul`
@@ -34,4 +33,5 @@ export const SaleButton = styled(NavLink)`
   padding: 14px 24px;
   margin: 16px 0;
   margin-left: auto;
+  margin-right: 16px;
 `;

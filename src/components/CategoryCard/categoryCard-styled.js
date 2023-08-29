@@ -10,11 +10,8 @@ import { Link } from "react-router-dom";
 export const Container = styled.li`
   width: 432px;
   height: 400px;
-  &:nth-child(n + 3) {
+  &:nth-child(2n + 3) {
     width: 736px;
-  }
-  &:nth-child(n + 4) {
-    width: 536px;
   }
 `;
 
