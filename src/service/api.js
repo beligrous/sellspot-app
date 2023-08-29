@@ -1,12 +1,14 @@
 import axios from "axios";
 
+const API_KEY = import.meta.env.VITE_API_KEY;
+const API_BASE_PATH = import.meta.env.VITE_API_BASE_PATH;
+
 axios.defaults.headers.common = {
-  "X-API-KEY":
-    "f308fda99e25d0fcc71eaea90a0385ce055b0719a640175b505544e087c3c839",
+  "X-API-KEY": API_KEY,
 };
 
 const instanse = axios.create({
-  baseURL: "https://api.sellspot.com.ua",
+  baseURL: API_BASE_PATH,
 });
 
 export const getCategories = async () => {
