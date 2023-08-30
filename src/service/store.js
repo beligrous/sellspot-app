@@ -8,3 +8,10 @@ export const useUser = create(
     removeUser: () => set({ user: [] }),
   }))
 );
+
+export const useCatalogue = create(
+  devtools((set) => ({
+    catalogue: [],
+    addCatalogue: (data) => set(() => ({ catalogue: [...data] })),
+  }))
+);

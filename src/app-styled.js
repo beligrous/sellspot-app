@@ -1,6 +1,7 @@
 import { styled } from "styled-components";
 
 export const Container = styled.div`
+  position: relative;
   display: flex;
   box-sizing: content-box;
   flex-direction: column;
@@ -8,5 +9,5 @@ export const Container = styled.div`
   margin: 0 auto;
   padding: 32px 56px;
   max-width: 1808px;
-  background-color: #e5e5e5;
+  background-color: #fff;
 `;
