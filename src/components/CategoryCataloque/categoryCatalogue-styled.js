@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import right from "../../assets/right.png";
 
 export const Container = styled.div`
   position: absolute;
@@ -17,10 +18,25 @@ export const Container = styled.div`
 `;
 
 export const CatalogueItem = styled.li`
+  display: flex;
+  justify-content: space-between;
   list-style: none;
-  border: 1px solid #4aa28f;
+  border: 2px solid #4aa28f;
+  border-radius: 16px;
+  max-width: 320px;
   margin-bottom: 16px;
-  &:last-child() {
+  padding: 13px 24px;
+  &:last-child {
     margin-bottom: 0;
   }
+`;
+
+export const ItemButton = styled.div`
+  display: inline-block;
+  background-image: url(${right});
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
 `;
