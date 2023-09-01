@@ -1,4 +1,4 @@
-import { Container } from "./categoryCatalogue-styled";
+import { Container, CatalogueItem } from "./categoryCatalogue-styled";
 import { useCatalogue } from "../../service/store";
 
 const CategoryCatalogue = () => {
@@ -6,11 +6,10 @@ const CategoryCatalogue = () => {
 
   return (
     <Container>
-      <h2>Catalogue</h2>
       <div>
         <ul>
           {categoryList.map((item) => (
-            <li key={item.id}>{item.category_name}</li>
+            <CatalogueItem key={item.id}>{item.category_name}</CatalogueItem>
           ))}
         </ul>
         <ul></ul>

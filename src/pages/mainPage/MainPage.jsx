@@ -1,6 +1,6 @@
 import { useEffect, useCallback } from "react";
 import { Hero, List } from "./mainPage.styled";
-import Filter from "../../components/Filter/Filter";
+import FilterSearch from "../../components/Filter/FilterSearch";
 import CategoryCard from "../../components/CategoryCard/CategoryCard";
 import { getCategories } from "../../service/api";
 import { useCatalogue } from "../../service/store";
@@ -31,7 +31,7 @@ const MainPage = () => {
         Пориньте в різноманітний каталог продуктів від найкращих продавців і
         перевірених брендів
       </Hero>
-      <Filter />
+      <FilterSearch />
       <List>{list}</List>
     </>
   );

@@ -11,7 +11,8 @@ export const Form = styled.div`
   padding: 0 16px 0 32px;
   margin-bottom: 56px;
   border-radius: 32px;
-  border: none;
+  border: 1px solid;
+  border-color: #4aa28f;
 `;
 
 export const Input = styled.input`
@@ -27,6 +28,7 @@ export const Input = styled.input`
 
 export const Button = styled.button`
   color: white;
+  background-color: #4aa28f;
   border-radius: 24px;
   font-size: 24px;
   padding: 14px 24px;

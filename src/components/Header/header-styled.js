@@ -8,6 +8,7 @@ export const Container = styled.header`
   width: 100%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   border-radius: 32px;
   background-color: #f3f3f1;
   margin-bottom: 56px;
@@ -27,11 +28,14 @@ export const HeadList = styled.ul`
 
 export const SaleButton = styled(NavLink)`
   color: white;
-  background-color: black;
+  background-color: #4aa28f;
   border-radius: 24px;
   font-size: 24px;
   padding: 14px 24px;
   margin: 16px 0;
-  margin-left: auto;
   margin-right: 16px;
+`;
+
+export const MenuItem = styled.p`
+  cursor: pointer;
 `;
