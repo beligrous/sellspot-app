@@ -1,5 +1,11 @@
 import { useState } from "react";
-import { Container, Logo, HeadList, SaleButton } from "./header-styled";
+import {
+  Container,
+  Logo,
+  HeadList,
+  SaleButton,
+  MenuItem,
+} from "./header-styled";
 import CategoryCatalogue from "../CategoryCataloque/categoryCatalogue";
 
 const Header = () => {
@@ -12,10 +18,10 @@ const Header = () => {
   return (
     <>
       <Container>
-        <Logo>SellSpot</Logo>
+        <Logo to={"/"}>SellSpot</Logo>
         <HeadList>
           <li>
-            <p onClick={handleCatalogue}>Каталог</p>
+            <MenuItem onClick={handleCatalogue}>Каталог</MenuItem>
           </li>
           <li>Про нас</li>
           <li>Контакти</li>

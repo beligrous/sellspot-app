@@ -1,14 +1,13 @@
-import { useState, useEffect, useCallback } from "react";
+import { useEffect, useCallback } from "react";
 import { Hero, List } from "./mainPage.styled";
-import Filter from "../../components/Filter/Filter";
+import FilterSearch from "../../components/Filter/FilterSearch";
 import CategoryCard from "../../components/CategoryCard/CategoryCard";
 import { getCategories } from "../../service/api";
-// import { useCatalogue } from "../../service/store";
+import { useCatalogue } from "../../service/store";
 
 const MainPage = () => {
-  const [categoryList, setCategoryList] = useState([]);
-  // const categoryList = useCatalogue((state) => state.catelogue);
-  // const setCategoryList = useCatalogue((state) => state.addCatalogue);
+  const categoryList = useCatalogue((state) => state.catalogue);
+  const setCategoryList = useCatalogue((state) => state.addCatalogue);
 
   const getData = useCallback(async () => {
     try {
@@ -24,7 +23,13 @@ const MainPage = () => {
   }, [getData]);
 
   const list = categoryList.map((item) => {
-    return <CategoryCard key={item.id} data={item}></CategoryCard>;
+    return (
+      <CategoryCard
+        style={{ width: "432px", height: "400px" }}
+        key={item.id}
+        data={item}
+      ></CategoryCard>
+    );
   });
   return (
     <>
@@ -32,7 +37,7 @@ const MainPage = () => {
         Пориньте в різноманітний каталог продуктів від найкращих продавців і
         перевірених брендів
       </Hero>
-      <Filter />
+      <FilterSearch />
       <List>{list}</List>
     </>
   );

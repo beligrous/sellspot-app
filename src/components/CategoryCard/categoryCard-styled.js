@@ -8,14 +8,15 @@ import { Link } from "react-router-dom";
 // };
 
 export const Container = styled.li`
-  width: 432px;
-  height: 400px;
+  list-style: none;
+  width: ${(props) => (props.width ? props.width : "432px")};
+  height: ${(props) => (props.height ? props.height : "400px")};
   &:nth-child(2n + 3) {
-    width: 736px;
+    width: ${(props) => !props.width && "736px"};
   }
 `;
 
-export const SmallContainer = styled(Container)``;
+// export const SmallContainer = styled(Container)``;
 
 export const CategoryContainer = styled.div`
   background-color: #fff;

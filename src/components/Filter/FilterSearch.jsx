@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { Form, Input, Button } from "./filter-styled";
+import { Form, Input, Button } from "./filterSearch-styled";
 
-const Filter = () => {
+const FilterSearch = () => {
   const [query, setQuery] = useState("");
 
   return (
@@ -18,4 +18,4 @@ const Filter = () => {
   );
 };
 
-export default Filter;
+export default FilterSearch;

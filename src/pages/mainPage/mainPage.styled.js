@@ -10,7 +10,6 @@ export const Hero = styled.h1`
 `;
 
 export const List = styled.ul`
-  list-style: none;
   display: flex;
   flex-wrap: wrap;
   gap: 32px;
