@@ -6,7 +6,7 @@ export const Container = styled.header`
   display: flex;
   align-items: center;
   border-radius: 32px;
-  background-color: #fff;
+  background-color: #f3f3f1;
   padding-left: 32px;
   padding-right: 16px;
 `;

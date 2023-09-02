@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react";
+import { useState } from "react";
 import {
   Container,
   CatalogueItem,
@@ -6,27 +6,20 @@ import {
 } from "./categoryCatalogue-styled";
 import { getCategoryById } from "../../service/api";
 import { useCatalogue } from "../../service/store";
+import CategoryCard from "../CategoryCard/CategoryCard";
 
 const CategoryCatalogue = () => {
   const categoryList = useCatalogue((state) => state.catalogue);
   const [categoryData, setCategoryData] = useState([]);
 
-  const getCategoryData = useCallback(async (id) => {
-    try {
-      const data = await getCategoryById(id);
-      setCategoryData(data);
-    } catch (error) {
-      alert(error.message);
-    }
-  }, []);
-
-  const handleChooseItem = (id) => {
-    getCategoryData(id);
+  const handleChooseItem = async (id) => {
+    const data = await getCategoryById(id);
+    setCategoryData(data);
   };
 
   return (
     <Container>
-      <div>
+      <div style={{ display: "flex" }}>
         <ul>
           {categoryList.map((item) => (
             <CatalogueItem key={item.id}>
@@ -37,9 +30,14 @@ const CategoryCatalogue = () => {
             </CatalogueItem>
           ))}
         </ul>
-        <ul>
+        <ul style={{ display: "flex", flexWrap: "wrap", gap: "32px" }}>
           {categoryData.map((item) => (
-            <li key={item.id}>{item.category_name}</li>
+            <CategoryCard
+              width="324px"
+              height="192px"
+              key={item.id}
+              data={item}
+            ></CategoryCard>
           ))}
         </ul>
       </div>

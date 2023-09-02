@@ -18,7 +18,7 @@ const Header = () => {
   return (
     <>
       <Container>
-        <Logo>SellSpot</Logo>
+        <Logo to={"/"}>SellSpot</Logo>
         <HeadList>
           <li>
             <MenuItem onClick={handleCatalogue}>Каталог</MenuItem>

@@ -23,7 +23,13 @@ const MainPage = () => {
   }, [getData]);
 
   const list = categoryList.map((item) => {
-    return <CategoryCard key={item.id} data={item}></CategoryCard>;
+    return (
+      <CategoryCard
+        style={{ width: "432px", height: "400px" }}
+        key={item.id}
+        data={item}
+      ></CategoryCard>
+    );
   });
   return (
     <>

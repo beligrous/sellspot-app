@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export const Container = styled.header`
   /* position: fixed; */
@@ -14,7 +14,7 @@ export const Container = styled.header`
   margin-bottom: 56px;
 `;
 
-export const Logo = styled.p`
+export const Logo = styled(Link)`
   margin: 0;
   margin-left: 32px;
 `;

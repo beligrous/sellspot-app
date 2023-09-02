@@ -5,9 +5,9 @@ import {
 } from "./categoryCard-styled";
 import PropTypes from "prop-types";
 
-const CategoryCard = ({ data }) => {
+const CategoryCard = ({ data, width, height }) => {
   return (
-    <Container>
+    <Container width={width} height={height}>
       <CategoryLink to={`/${data.id}`}>
         <p>{data.category_name}</p>
         <CategoryContainer>
@@ -26,4 +26,6 @@ CategoryCard.propTypes = {
     category_name: PropTypes.string,
     child_count: PropTypes.number,
   }),
+  width: PropTypes.string,
+  height: PropTypes.string,
 };
