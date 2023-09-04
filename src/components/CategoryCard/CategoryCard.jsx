@@ -7,7 +7,7 @@ import PropTypes from "prop-types";
 
 const CategoryCard = ({ data, width, height }) => {
   return (
-    <Container width={width} height={height}>
+    <Container width={width} height={height} image={data.image_url}>
       <CategoryLink to={`/${data.id}`}>
         <p>{data.category_name}</p>
         <CategoryContainer>
@@ -25,6 +25,7 @@ CategoryCard.propTypes = {
     id: PropTypes.string,
     category_name: PropTypes.string,
     child_count: PropTypes.number,
+    image_url: PropTypes.string,
   }),
   width: PropTypes.string,
   height: PropTypes.string,

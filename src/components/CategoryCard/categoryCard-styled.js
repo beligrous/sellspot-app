@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 
 export const Container = styled.li`
   list-style: none;
+  background-image: url(${(props) => props.image});
   width: ${(props) => (props.width ? props.width : "432px")};
   height: ${(props) => (props.height ? props.height : "400px")};
   &:nth-child(2n + 3) {
@@ -28,7 +29,7 @@ export const CategoryContainer = styled.div`
 export const CategoryLink = styled(Link)`
   display: block;
   box-sizing: border-box;
-  background-color: #f2f2f2;
+  /* background-color: #f2f2f2; */
   border-radius: 32px;
   padding: 32px;
   height: 100%;
