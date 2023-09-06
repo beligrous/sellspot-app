@@ -1,20 +1,11 @@
 import { styled } from "styled-components";
 import { Link } from "react-router-dom";
 
-// const getRandomSize = () => {
-//   const sizes = ["400px", "500px", "700px"];
-//   const randomIndex = Math.floor(Math.random() * sizes.length);
-//   return sizes[randomIndex];
-// };
-
 export const Container = styled.li`
   position: relative;
   list-style: none;
   border-radius: 32px;
   overflow: hidden;
-  /* background-image: url(${(props) => props.image});
-  background-repeat: no-repeat;
-  background-size: cover; */
   width: ${(props) => (props.width ? props.width : "432px")};
   height: ${(props) => (props.height ? props.height : "400px")};
   &:nth-child(2n + 3) {
@@ -36,9 +27,16 @@ export const CategoryData = styled.div`
   right: 0;
   bottom: 0;
   padding: 32px;
+  transition-property: transform;
+  transition-duration: 400ms;
+  &:hover,
+  &:focus {
+    transform: scale(0.94);
+  }
 `;
 
 export const CategoryLink = styled(Link)`
+  position: relative;
   display: block;
   box-sizing: border-box;
   height: 100%;
