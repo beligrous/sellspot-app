@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, useLocation } from "react-router-dom";
 import { useEffect, useCallback, useState } from "react";
 import { List } from "./categoryPage-styled";
 import { getCategoryById } from "../../service/api";
@@ -7,6 +7,7 @@ import CategoryCard from "../../components/CategoryCard/CategoryCard";
 const CategoryPage = () => {
   const [categoryList, setCategoryList] = useState([]);
   const { id } = useParams();
+  const location = useLocation();
 
   const getCategoryData = useCallback(async () => {
     try {
@@ -23,11 +24,15 @@ const CategoryPage = () => {
 
   return (
     <>
-      <h2>CategoryPage here:</h2>
+      <h2>{location.state.from}</h2>
       <List>
-        {categoryList.map((item) => (
-          <CategoryCard key={item.id} data={item}></CategoryCard>
-        ))}
+        {categoryList ? (
+          categoryList.map((item) => (
+            <CategoryCard key={item.id} data={item}></CategoryCard>
+          ))
+        ) : (
+          <span>There is no categories yet</span>
+        )}
       </List>
     </>
   );

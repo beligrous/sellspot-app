@@ -22,6 +22,7 @@ export const InnerCategory = styled.div`
 
 export const CategoryData = styled.div`
   position: absolute;
+  color: black;
   top: 0;
   left: 0;
   right: 0;
@@ -31,7 +32,7 @@ export const CategoryData = styled.div`
   transition-duration: 400ms;
   &:hover,
   &:focus {
-    transform: scale(0.94);
+    transform: scale(0.95);
   }
 `;
 
@@ -47,6 +48,6 @@ export const CategoryLink = styled(Link)`
   transition-duration: 400ms;
   &:hover,
   &:focus {
-    transform: scale(1.06);
+    transform: scale(1.05);
   }
 `;

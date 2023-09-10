@@ -9,7 +9,11 @@ import PropTypes from "prop-types";
 const CategoryCard = ({ data, width, height }) => {
   return (
     <Container width={width} height={height}>
-      <CategoryLink to={`/${data.id}`} image={data.image_url}>
+      <CategoryLink
+        to={`/${data.id}`}
+        image={data.image_url}
+        state={{ from: data.category_name }}
+      >
         <CategoryData>
           <p>{data.category_name}</p>
           <InnerCategory>
