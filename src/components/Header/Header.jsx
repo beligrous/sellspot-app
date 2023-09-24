@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { usePath } from "../../service/store";
 import {
   Container,
   Logo,
@@ -10,6 +11,7 @@ import CategoryCatalogue from "../CategoryCataloque/categoryCatalogue";
 
 const Header = () => {
   const [apear, setApear] = useState(false);
+  const initPath = usePath((state) => state.initPath);
 
   const handleCatalogue = () => {
     setApear(!apear);
@@ -17,7 +19,7 @@ const Header = () => {
 
   return (
     <>
-      <Container>
+      <Container onClick={initPath()}>
         <Logo to={"/"}>SellSpot</Logo>
         <HeadList>
           <li>

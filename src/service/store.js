@@ -15,3 +15,17 @@ export const useCatalogue = create(
     addCatalogue: (data) => set(() => ({ catalogue: [...data] })),
   }))
 );
+
+export const useCrumb = create((set) => ({
+  crumb: [],
+  addCrumb: (data) => set(() => ({ crumb: [...data] })),
+  initCrumb: () => set(() => ({ crumb: [] })),
+}));
+
+export const usePath = create(
+  devtools((set) => ({
+    path: [],
+    addPath: (data) => set((state) => ({ path: [data, ...state.path] })),
+    initPath: () => set(() => ({ path: [] })),
+  }))
+);

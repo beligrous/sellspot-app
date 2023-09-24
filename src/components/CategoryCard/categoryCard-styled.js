@@ -1,14 +1,11 @@
 import { styled } from "styled-components";
 import { Link } from "react-router-dom";
 
-// const getRandomSize = () => {
-//   const sizes = ["400px", "500px", "700px"];
-//   const randomIndex = Math.floor(Math.random() * sizes.length);
-//   return sizes[randomIndex];
-// };
-
 export const Container = styled.li`
+  position: relative;
   list-style: none;
+  border-radius: 32px;
+  overflow: hidden;
   width: ${(props) => (props.width ? props.width : "432px")};
   height: ${(props) => (props.height ? props.height : "400px")};
   &:nth-child(2n + 3) {
@@ -16,20 +13,41 @@ export const Container = styled.li`
   }
 `;
 
-// export const SmallContainer = styled(Container)``;
-
-export const CategoryContainer = styled.div`
+export const InnerCategory = styled.div`
   background-color: #fff;
   border-radius: 16px;
   padding: 8px 16px;
   width: 145px;
 `;
 
+export const CategoryData = styled.div`
+  position: absolute;
+  color: black;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 32px;
+  transition-property: transform;
+  transition-duration: 400ms;
+  &:hover,
+  &:focus {
+    transform: scale(0.95);
+  }
+`;
+
 export const CategoryLink = styled(Link)`
+  position: relative;
   display: block;
   box-sizing: border-box;
-  background-color: #f2f2f2;
-  border-radius: 32px;
-  padding: 32px;
   height: 100%;
+  background-image: url(${(props) => props.image});
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition-property: transform;
+  transition-duration: 400ms;
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+  }
 `;
