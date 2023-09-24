@@ -4,15 +4,27 @@ import {
   CategoryData,
   CategoryLink,
 } from "./categoryCard-styled";
+import { usePath } from "../../service/store";
 import PropTypes from "prop-types";
 
 const CategoryCard = ({ data, width, height }) => {
+  const addPath = usePath((state) => state.addPath);
+  const path = usePath((state) => state.path);
+
+  const handleAddPath = () => {
+    addPath(data.id);
+  };
+
   return (
-    <Container width={width} height={height}>
+    <Container width={width} height={height} onClick={handleAddPath}>
       <CategoryLink
-        to={`/${data.id}`}
+        to={
+          `${data.id}` ||
+          `${path[0]}/${data.id}` ||
+          `${path[1]}/${path[0]}/${data.id}`
+        }
         image={data.image_url}
-        state={{ from: data.category_name }}
+        state={{ from: data.category_name, fromId: data.id }}
       >
         <CategoryData>
           <p>{data.category_name}</p>
