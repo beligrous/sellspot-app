@@ -16,12 +16,6 @@ export const useCatalogue = create(
   }))
 );
 
-export const useCrumb = create((set) => ({
-  crumb: [],
-  addCrumb: (data) => set(() => ({ crumb: [...data] })),
-  initCrumb: () => set(() => ({ crumb: [] })),
-}));
-
 export const usePath = create(
   devtools((set) => ({
     path: [],

@@ -15,6 +15,8 @@ export const Container = styled.header`
 `;
 
 export const Logo = styled(Link)`
+  text-decoration: none;
+  color: inherit;
   margin: 0;
   margin-left: 32px;
 `;

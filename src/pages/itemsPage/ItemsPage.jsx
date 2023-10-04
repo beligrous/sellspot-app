@@ -6,7 +6,7 @@ const ItemsPage = () => {
   return (
     <>
       <p>{id}</p>
-      <p>Page of the category</p>
+      <p>Page of the category items</p>
     </>
   );
 };

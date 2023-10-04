@@ -17,13 +17,7 @@ export const Form = styled.div`
 
 export const Input = styled.input`
   border: none;
-  /* margin-left: 32px; */
-  &::before {
-    content: " ";
-    width: 48px;
-    height: 48px;
-    background-image: url(${search});
-  }
+  margin-left: 16px;
 `;
 
 export const Button = styled.button`
@@ -34,4 +28,11 @@ export const Button = styled.button`
   padding: 14px 24px;
   margin: 16px 0;
   margin-left: auto;
+`;
+
+export const Img = styled.div`
+  align-self: center;
+  width: 48px;
+  height: 48px;
+  background-image: url(${search});
 `;
