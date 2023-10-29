@@ -1,0 +1,111 @@
+:root {
+  font-family: 'Gothic A1', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  /* Змінні кольорів */
+  --Primary100: #FFF;
+  --Primary80: #B9DFD7;
+  --Primary50: #4AA28F;
+  --Primary40: #408C7C;
+  --Primary30: #30695D;
+  --Primary20: #20463E;
+  --Primary5: #08120F;
+
+  --Secondary95: #F3F3F1;
+  --Secondary90: #E8E7E3;
+  --Secondary80: #D0CFC8;
+  --Secondary70: #B9B6AC;
+  --Secondary60: #A29E90;
+  --Secondary50: #E4E3DF;
+  --Secondary40: #6F6B5D;
+  --Secondary20: #37362F;
+  --Secondary10: #1C1B17;
+
+  --Neutral90: #191919;
+  --Neutral70: #4D4D4D;
+  --Neutral40: #999;
+  --Neutral20: #CCC;
+  --Neutral1: #FCFCFC;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Gothic A1', sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+/* --------------------- *\
+      # Стилі тексту
+\* --------------------- */
+h1 {
+  font-size: 72px;
+  font-weight: 500;
+  line-height: 130%;
+}
+
+h2 {
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+h3 {
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+button {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 100%;
+  transition: all .3s;
+}
+
+a {
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/* --------------------- *\
+       # Додатково
+\* --------------------- */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+input {
+  outline: none;
+}
+
+/* --------------------- *\
+      # Скролл сайту
+\* --------------------- */
+
+body::-webkit-scrollbar {
+  width: 6px;              /* ширина */
+  height: 10px;
+}
+body::-webkit-scrollbar-track { /* задній фон */
+  background: var(--Secondary95);
+}
+body::-webkit-scrollbar-thumb {  
+  background-color: var(--Primary30);    /* колір того що рухається */   
+  border-radius: 3px;
+}
